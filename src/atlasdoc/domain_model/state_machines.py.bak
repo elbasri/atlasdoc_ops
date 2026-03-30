@@ -1,0 +1,19 @@
+# State Machines
+from typing import Any, Dict
+
+class DocumentStateMachine:
+    def __init__(self, document: 'Document'):
+        self.document = document
+        self.state = 'draft'
+
+    def submit_for_review(self) -> None:
+        if self.state == 'draft':
+            self.state = 'review'
+        else:
+            raise ValueError('Invalid state transition')
+
+    def approve(self) -> None:
+        if self.state == 'review':
+            self.state = 'approved'
+        else:
+            raise ValueError('Invalid state transition')

@@ -1,0 +1,5 @@
+from src.atlasdoc_storage_data_v1.database import create_connection, SQL_CREATE_DOCUMENTS_TABLE
+
+def test_create_connection():
+    connection = create_connection()
+    assert connection is not None

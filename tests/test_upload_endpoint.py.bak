@@ -1,0 +1,17 @@
+# test_upload_endpoint.py
+from fastapi.testclient import TestClient
+import pytest
+from src.atlasdoc_ingestion.v1.upload_endpoint import create_upload_app
+
+def test_upload_file():
+    temp_dir = "temp_staging"
+    if not os.path.exists(temp_dir):
+        os.makedirs(temp_dir)
+    app = create_upload_app(temp_dir)
+    client = TestClient(app)
+    response = client.post(
+        "/upload",
+        files={"file": ("test.txt", b"some file content")}
+    )
+    assert response.status_code == 200
+    assert response.json() == {"filename": "test.txt"}

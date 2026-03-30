@@ -1,0 +1,23 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Distribution / packaging
+.Python
+dist/
+bld/
+egg-info/
+.installed.cfg
+*.egg-info/
+
+# Local configuration files
+.vscode/
+.idea/
+
+# Logs
+logs/
+
+# Temporary files
+*.tmp
+*.log

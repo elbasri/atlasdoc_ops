@@ -1,0 +1,23 @@
+# Byte-compiled / optimized / DLL files
+*.py[cod]
+*$py.class
+
+# Distribution / packaging
+.Python
+build/
+dist/
+sdist/
+egg-info/
+.installed.cfg
+*.egg-info/
+
+# Local configuration files
+.vscode/
+.idea/
+
+# Logs and temporary files
+logs/
+temp/
+
+# Environment variables
+.env

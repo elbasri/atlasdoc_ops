@@ -1,0 +1,3 @@
+# requirements.txt
+fastapi==0.75.2
+tiangolo/uvicorn-gunicorn-fastapi:python3.9

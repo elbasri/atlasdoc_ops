@@ -1,0 +1,17 @@
+from dataclasses import dataclass
+
+class Document:
+    def __init__(self, title: str, content: str):
+        self.title = title
+        self.content = content
+
+    def update_content(self, new_content: str) -> None:
+        self.content = new_content
+
+@dataclass
+class DocumentStateMachine:
+    document: Document
+
+    def submit_for_review(self) -> None:
+        # Placeholder for actual implementation
+        pass
